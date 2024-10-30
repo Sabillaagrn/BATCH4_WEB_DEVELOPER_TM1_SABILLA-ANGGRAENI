@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register</title>
+    <link rel="stylesheet" href="style/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <!-- Form Login -->
+            <form id="login-form" class="form">
+                <h2>Login</h2>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit" class="btn">Login</button>
+                <p>Don't have an account? <a href="#" onclick="toggleForm()">Register</a></p>
+            </form>
+        
+            <!-- Form Register -->
+            <form id="register-form" class="form hidden">
+                <h2>Register</h2>
+                <label for="username-register">Username</label>
+                <input type="text" id="username-register" name="username" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password-register">Password</label>
+                <input type="password" id="password-register" name="password" required>
+                
+                <button type="submit" class="btn">Register</button>
+                <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+            </form>
+        
+            <div class="back-to-home">
+                <a href="/index.html">Back to Home</a>
+            </div>
+        </div>
+
+        <!-- Card for registration information -->
+        <div id="registration-card" class="card hidden">
+            <h3>Registration Information</h3>
+            <p><strong>Username:</strong> <span id="registered-username"></span></p>
+            <p><strong>Email:</strong> <span id="registered-email"></span></p>
+            <p><strong>Password:</strong> <span id="registered-password"></span></p>
+            <button class="btn" onclick="closeCard()">Close</button>
+        </div>
+
+    </div>
+    <script src="Js/login.js"></script>
+</body>
+</html>

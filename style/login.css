@@ -1,0 +1,181 @@
+/* Global Styles */
+:root {
+    --primaryTextColor: #ffffff;
+    --secondaryTextColor: #b5b5b5;
+    --borderColor: #f1f1f1;
+    --lineColor: #d9d9d9;
+    --primaryBackgroundColor: #1e1e1e;
+    --secondaryBackgroundColor: #2d2d2d;
+    --thirdBackgroundColor: #f5f3fe;
+    --primaryIconColor: #1fb8a3;
+    --primaryIconColorHover: #0d7f6d;
+    --sectionPadding: 3rem 0;
+    --itemBorderRadius: 0.7rem;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondaryBackgroundColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Form Styles */
+.form-container {
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn {
+    background-color: var(--primaryIconColor);
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--primaryIconColorHover);
+}
+
+/* Toggle between Login and Register */
+.hidden {
+    display: none;
+}
+
+p {
+    text-align: center;
+    margin-top: 1rem;
+    color: #777;
+}
+
+a {
+    color: var(--primaryIconColorHover);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/* card */
+.hidden {
+    display: none;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container {
+    margin-bottom: 20px; /* Jarak antara form dan elemen di bawahnya */
+}
+
+.btn {
+    background-color: var(--primaryIconColor);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--primaryIconColorHover);
+}
+
+/* Back to Home link styles */
+.back-to-home {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-home a {
+    text-decoration: none;
+    color: var(--primaryIconColorHover);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.back-to-home a:hover {
+    color: var(--secondaryBackgroundColor);
+}
+
+/* Hide login menu when logged in */
+#login-menu.hidden {
+    display: none;
+}
+
+/* Show profile menu when logged in */
+#profile-menu.hidden {
+    display: none;
+}
+
+#profile-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+#profile-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}

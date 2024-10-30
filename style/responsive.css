@@ -1,0 +1,267 @@
+@media screen and (max-width: 825px) {
+    /* Burger */
+    .burger {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .toggle-burger .line-1 {
+      transform: rotate(-45deg) translate(-5px, 7px);
+    }
+  
+    .toggle-burger .line-2 {
+      opacity: 0;
+    }
+  
+    .toggle-burger .line-3 {
+      transform: rotate(45deg) translate(-5px, -7px);
+    }
+  
+    /* Navigation */
+    nav {
+      position: fixed;
+      width: 50%;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      flex-direction: column;
+      background: var(--primaryBackgroundColor);
+      border-left: 1px solid var(--borderColor);
+      z-index: 9;
+      transform: translateX(100%);
+      transition: 0.2s ease-in-out;
+    }
+  
+    nav ul {
+      height: 100vh;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .nav-active {
+      transform: translateX(0);
+    }
+    /* End of Navigation */
+  
+    :root {
+      --sectionPadding: 4rem 0;
+    }
+  
+    /* Titles */
+    .section-title {
+      font-size: 1.6rem;
+      margin: 0.6rem 0 2.5rem;
+    }
+  
+    .pre-title {
+      font-size: 0.8rem;
+    }
+  
+    /* Responsive Design for Hero */
+@media screen and (max-width: 768px) {
+  #hero .main-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto; /* Atur untuk memisahkan gambar dan teks */
+      text-align: center; /* Pusatkan teks di tengah */
+  }
+
+  .hero-left {
+      order: 2; /* Tempatkan teks di bawah gambar */
+  }
+
+  .hero-right {
+      order: 1; /* Tempatkan gambar di atas teks */
+      margin-bottom: 2rem; /* Beri jarak bawah antara gambar dan teks */
+  }
+
+  .hero-right img {
+      width: 100%; /* Gambar memenuhi lebar layar */
+      max-width: 100%; /* Pastikan gambar tidak lebih besar dari lebar layar */
+      height: auto;
+      margin: 0 auto; /* Pusatkan gambar */
+  }
+
+  .hero-name {
+      font-size: 2.5rem; /* Ubah ukuran font agar sesuai dengan layar kecil */
+  }
+}
+
+  
+  /* Mobile Size */
+  @media screen and (max-width: 640px) {
+    /* Titles */
+    .section-title {
+      font-size: 1.3rem;
+    }
+  
+    .pre-title {
+      font-size: 0.7rem;
+    }
+  } @media screen and (max-width: 825px) {
+    /* Burger */
+    .burger {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .toggle-burger .line-1 {
+      transform: rotate(-45deg) translate(-5px, 7px);
+    }
+  
+    .toggle-burger .line-2 {
+      opacity: 0;
+    }
+  
+    .toggle-burger .line-3 {
+      transform: rotate(45deg) translate(-5px, -7px);
+    }
+  
+    /* Navigation */
+    nav {
+      position: fixed;
+      width: 50%;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      flex-direction: column;
+      background: var(--primaryBackgroundColor);
+      border-left: 1px solid var(--borderColor);
+      z-index: 9;
+      transform: translateX(100%);
+      transition: 0.2s ease-in-out;
+    }
+  
+    nav ul {
+      height: 100vh;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .nav-active {
+      transform: translateX(0);
+    }
+    /* End of Navigation */
+  
+    :root {
+      --sectionPadding: 4rem 0;
+    }
+  
+    /* Titles */
+    .section-title {
+      font-size: 1.6rem;
+      margin: 0.6rem 0 2.5rem;
+    }
+  
+    .pre-title {
+      font-size: 0.8rem;
+    }
+  
+    /* Hero Section */
+    #hero {
+      grid-template-columns: 1fr;
+      height: fit-content;
+    }
+  
+    .hero-right {
+      order: -1;
+    }
+  
+    .hero-right img {
+      width: 70%;
+    }
+  
+    .hero-left {
+      text-align: center;
+      padding-bottom: 5rem;
+    }
+  
+    .hero-left .pre-title {
+      margin: 0 auto;
+    }
+  
+    .hero-name {
+      font-size: 2.3rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    /* Skills Section */
+    .skills-grid {
+      gap: 1rem;
+    }
+  
+    /* Footer */
+    footer {
+      padding: 2rem 0;
+    }
+  }
+  
+  /* Mobile Size */
+  @media screen and (max-width: 640px) {
+    /* Titles */
+    .section-title {
+      font-size: 1.3rem;
+    }
+  
+    .pre-title {
+      font-size: 0.7rem;
+    }
+  }
+
+  /* Base style (Mobile-first) */
+#program .program-grid {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 576px) {
+    /* Untuk layar berukuran kecil seperti ponsel dalam mode landscape atau tablet kecil */
+    #program .program-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    /* Untuk layar berukuran medium seperti tablet */
+    #program .program-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    /* Untuk layar berukuran besar seperti laptop kecil */
+    #program .program-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    /* Untuk layar berukuran sangat besar seperti desktop */
+    #program .program-grid {
+        grid-template-columns: repeat(4, 3fr);
+    }
+}
+
+/* Responsif untuk judul */
+#program h2 {
+    font-size: 1.5em; /* Ukuran default lebih kecil */
+}
+
+@media (min-width: 576px) {
+    #program h2 {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 768px) {
+    #program h2 {
+        font-size: 2.5em;
+    }
+}
+
+@media (min-width: 992px) {
+    #program h2 {
+        font-size: 3em;
+    }
+}
+}

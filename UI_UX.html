@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Program Pelatihan UI/UX Design</title>
+    <link rel="stylesheet" href="style/responsive.css">
+    <style>
+        :root {
+            --primaryTextColor: #ffffff;
+            --secondaryTextColor: #b5b5b5;
+            --borderColor: #f1f1f1;
+            --lineColor: #d9d9d9;
+            --primaryBackgroundColor: #1e1e1e;
+            --secondaryBackgroundColor: #2d2d2d;
+            --thirdBackgroundColor: #f5f3fe;
+            --primaryIconColor: #1fb8a3;
+            --primaryIconColorHover: #0d7f6d;
+            --sectionPadding: 3rem 0;
+            --itemBorderRadius: 0.7rem;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondaryBackgroundColor);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primaryIconColor);
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primaryIconColorHover);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 1rem 1.5rem;
+            background: transparent; 
+            border: 1.5px solid var(--primaryIconColor); 
+            color: var(--primaryIconColor); 
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+            border-radius: 0.5rem; 
+        }
+
+        .btn:hover {
+            background: var(--primaryIconColor); 
+            color: white; 
+        }
+
+        /* Header */
+        header {
+            background-color: var(--secondaryBackgroundColor);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            background-color: var(--secondaryBackgroundColor);
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            font-size: 2rem;
+            margin-left: 2rem;
+            font-weight: 700;
+            color: var(--primaryTextColor);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--primaryTextColor);
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 2px;
+            background-color: var(--primaryIconColor);
+            margin: 7px;
+            transition: all 0.3s;
+            z-index: 99;
+        }
+        
+        .burger {
+            display: none;
+            z-index: 99;
+            position: fixed;
+            top: 33px;
+            right: 35px;
+        }
+
+        #detail-program {
+            padding: 40px 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .main-container {
+            padding: 20px;
+        }
+
+        .program-detail {
+            position: relative;
+        }
+
+        .program-detail h3 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 2.5em;
+            color: var(--primaryIconColor);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .program-detail p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .program-detail h4 {
+            font-size: 1.8em;
+            color: var(--primaryIconColorHover);
+            border-bottom: 2px solid;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .program-detail ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .program-detail ul li {
+            background: #f9f9f9;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .trainer-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .trainer {
+            flex: 1;
+            text-align: center;
+            max-width: 300px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .trainer img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .trainer h5 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .trainer p {
+            color: #777;
+        }
+
+        .register-btn {
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: var(--primaryIconColor);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-btn:hover {
+            background-color: var(--primaryIconColorHover);
+        }
+
+        /* Card Styles */
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 20px 0;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: var(--primaryIconColor);
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .card ul li {
+            background: #f9f9f9;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+
+        .detail-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primaryIconColor);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .detail-btn:hover {
+            background-color: var(--primaryIconColorHover);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="main-container">
+            <div class="nav">
+                <div class="logo">
+                    <a href="/">ST</a>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#program">Program Pelatihan</a></li>
+                        <li><a href="#informasi">Detail Program</a></li>
+                        <li><a href="beritaArticle.html" target="_blank">Berita & Artikel</a></li>
+                        <li><a href="#kontak">Contact Us</a></li>
+                        <li>
+                            <a href="login.html" target="_blank">
+                                <button class="btn">Login / Register</button>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="burger">
+                    <div class="line-1"></div>
+                    <div class="line-2"></div>
+                    <div class="line-3"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="detail-program">
+        <div class="main-container">
+            <div class="program-detail">
+                <h3>UI/UX Design</h3>
+                <p><strong>Deskripsi Program:</strong> Program ini bertujuan untuk memberikan pemahaman mendalam mengenai desain antarmuka pengguna (UI) dan pengalaman pengguna (UX). Peserta akan belajar tentang prinsip desain, penelitian pengguna, pembuatan wireframe, prototyping, serta penggunaan alat desain modern.</p>
+                <p><strong>Biaya:</strong> Rp. 7.000.000</p>
+                
+                <h4>Kurikulum:</h4>
+                <ul>
+                    <li><strong>Minggu 1-2:</strong> Pengenalan UI/UX Design - Prinsip dasar dan metodologi desain</li>
+                    <li><strong>Minggu 3-4:</strong> Penelitian Pengguna - Teknik untuk memahami kebutuhan dan perilaku pengguna</li>
+                    <li><strong>Minggu 5-6:</strong> Pembuatan Wireframe - Teknik untuk merancang struktur antarmuka</li>
+                    <li><strong>Minggu 7-8:</strong> Prototyping - Pembuatan prototipe interaktif untuk pengujian desain</li>
+                    <li><strong>Minggu 9-10:</strong> Desain Visual - Prinsip desain visual dan penggunaan alat desain seperti Figma dan Adobe XD</li>
+                    <li><strong>Minggu 11-12:</strong> Pengujian Usability - Teknik untuk menguji dan mengevaluasi desain dari perspektif pengguna</li>
+                    <li><strong>Minggu 13-16:</strong> Proyek Akhir - Penerapan keterampilan dalam proyek desain UI/UX nyata dan presentasi hasil</li>
+                </ul>
+                
+                <h4>Jadwal Kelas:</h4>
+                <p>Kelas dilaksanakan setiap Senin dan Jumat, pukul 18.00 - 21.00 WIB.</p>
+                <p><strong>Tempat:</strong> SmartTech, Jl. Teknologi No. 45, Jakarta</p>
+                
+                <h4>Informasi Tenaga Pelatih:</h4>
+                <div class="trainer-info">
+                    <div class="trainer">
+                        <img src="/img/testimoni1.jpeg" alt="Pelatih 1">
+                        <h5>John Doe</h5>
+                        <p><strong>Pengalaman:</strong> 12 tahun dalam desain UI/UX, spesialisasi dalam prototyping dan desain interaktif.</p>
+                    </div>
+                    <div class="trainer">
+                        <img src="/img/testimoni3.jpg" alt="Pelatih 2">
+                        <h5>Jane Smith</h5>
+                        <p><strong>Pengalaman:</strong> 9 tahun dalam penelitian pengguna dan desain visual, ahli dalam alat desain seperti Figma dan Adobe XD.</p>
+                    </div>
+                </div>
+                
+                <h4>Pendaftaran:</h4>
+                <p>Untuk mendaftar, silakan klik tombol di bawah ini dan isi formulir pendaftaran online.</p>
+                <a href="formulir-pendaftaran.html" class="register-btn">Daftar Sekarang</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
